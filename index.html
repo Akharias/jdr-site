@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDR - Compagnons des Ombres</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: #2b2b2b url('https://cdn.pixabay.com/photo/2017/08/30/00/16/parchment-2692449_1280.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #ffc107;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #ffc107;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffc107;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .forum {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .forum th, .forum td {
+            border: 1px solid #ffc107;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .forum th {
+            background: #ffc107;
+            color: #000;
+        }
+
+        .forum tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Compagnons des Ombres</h1>
+        <p>Portail des aventuriers - Restez connectés à votre quête</p>
+    </header>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#forum">Forum</a>
+        <a href="#documents">Documents</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#campagne">Campagne</a>
+    </nav>
+    <div class="container" id="accueil">
+        <h2>Bienvenue sur le portail de votre campagne JDR</h2>
+        <p>Explorez l'univers, partagez vos idées, et coordonnez vos aventures !</p>
+    </div>
+    <div class="container" id="campagne">
+        <h2>Détails de la Campagne</h2>
+        <p><strong>Résumé :</strong> Les aventuriers doivent explorer une tour mystérieuse...</p>
+        <h3>Fiches de personnage</h3>
+        <ul>
+            <li><a href="#baffror">Baffror Forgeplume</a></li>
+            <li><a href="#eloria">Eloria Feuillétincelle</a></li>
+            <li><a href="#kodalys">Kodalys Kotsuyo</a></li>
+            <li><a href="#zyrka">Zyrka Marmilèche</a></li>
+            <li><a href="#zaar">Zaar Béni Asmodaï</a></li>
+            <li><a href="#thalric">Thalric Riven</a></li>
+            <li><a href="#papipol">Papipol</a></li>
+            <li><a href="#jouro">Jouro Binnet</a></li>
+        </ul>
+
+        <!-- Section pour chaque personnage -->
+        <div id="baffror">
+            <h4>Baffror Forgeplume</h4>
+            <p><strong>Résumé :</strong> Nain lettré cherchant un grimoire perdu.</p>
+            <p><a href="baffror_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+        </div>
+        <div id="eloria">
+            <h4>Eloria Feuillétincelle</h4>
+            <p><strong>Résumé :</strong> Magicienne traquant le mal.</p>
+            <p><a href="eloria_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+        </div>
+        <div id="kodalys">
+            <h4>Kodalys Kotsuyo</h4>
+            <p><strong>Résumé :</strong> Elfe sorcière souhaitant créer un artefact puissant.</p>
+            <p><a href="kodalys_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+        </div>
+        <div id="zyrka">
+            <h4>Zyrka Marmilèche</h4>
+            <p><strong>Résumé :</strong> Drakéïde moine en quête d'une relique pour son monastère.</p>
+            <p><a href="zyrka_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+        </div>
+        <div id="zaar">
+            <h4>Zaar Béni Asmodaï</h4>
+            <p><strong>Résumé :</strong> Tieffeline sorcière cherchant son village natal.</p>
+            <p><a href="zaar_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+        </div>
+        <div id="thalric">
+            <h4>Thalric Riven</h4>
+            <p><strong>Résumé :</strong> Humain rôdeur traquant une créature sauvage.</p>
+            <p><a href="thalric_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+        </div>
+        <div id="papipol">
+            <h4>Papipol</h4>
+            <p><strong>Résumé :</strong> Gnome barbare cherchant une hache vorpale légendaire.</p>
+            <p><a href="papipol_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+        </div>
+        <div id="jouro">
+            <h4>Jouro Binnet</h4>
+            <p><strong>Résumé :</strong> Demi-orc guerrier voulant libérer ses congénères d'un camp d'esclaves.</p>
+            <p><a href="jouro_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+        </div>
+    </div>
+</body>
+</html>
