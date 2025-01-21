@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDR - Compagnons des Ombres</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: #2b2b2b url('https://cdn.pixabay.com/photo/2017/08/30/00/16/parchment-2692449_1280.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #ffc107;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #ffc107;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffc107;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .forum {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .forum th, .forum td {
+            border: 1px solid #ffc107;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .forum th {
+            background: #ffc107;
+            color: #000;
+        }
+
+        .forum tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Compagnons des Ombres</h1>
+        <p>Portail des aventuriers - Restez connectés à votre quête</p>
+    </header>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#forum">Forum</a>
+        <a href="#documents">Documents</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#campagne">Campagne</a>
+    </nav>
+    <div class="container" id="accueil">
+        <h2>Bienvenue sur le portail de votre campagne JDR</h2>
+        <p>Plongez dans un univers épique où vos choix façonnent le destin du monde. Utilisez ce site pour partager vos idées, vos découvertes, et rester en contact avec vos compagnons d'aventure.</p>
+    </div>
+    <div class="container" id="forum">
+        <h2>Forum des Aventuriers</h2>
+        <table class="forum">
+            <tr>
+                <th>Catégorie</th>
+                <th>Description</th>
+                <th>Dernier Message</th>
+            </tr>
+            <tr>
+                <td><a href="#">Discussions Générales</a></td>
+                <td>Parlez de tout et de rien, partagez vos idées !</td>
+                <td>Il y a 1 heure</td>
+            </tr>
+            <tr>
+                <td><a href="#">Lore et Campagne</a></td>
+                <td>Partagez vos notes sur le monde et vos théories.</td>
+                <td>Hier</td>
+            </tr>
+            <tr>
+                <td><a href="#">Création de Personnages</a></td>
+                <td>Discutez et peaufinez vos fiches de personnages.</td>
+                <td>2 jours</td>
+            </tr>
+        </table>
+    </div>
+    <div class="container" id="documents">
+        <h2>Documents Partagés</h2>
+        <p>Ici, vous pouvez télécharger et consulter tous les fichiers liés à la campagne : règles, fiches de personnage, cartes, etc.</p>
+    </div>
+    <div class="container" id="galerie">
+        <h2>Galerie</h2>
+        <p>Explorez les illustrations, cartes, et souvenirs de votre campagne.</p>
+    </div>
+    <div class="container" id="campagne">
+        <h2>Détails de la Campagne</h2>
+        <p>Retrouvez ici les informations essentielles sur l'histoire, les personnages, et les événements marquants.</p>
+    </div>
+</body>
+</html>
