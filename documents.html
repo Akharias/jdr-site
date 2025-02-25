@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDR - Compagnons des Ombres</title>
+    <style>
+        a:link,
+        a:visited {
+            color: white; /* Les liens restent bleus, qu'ils soient visités ou non */
+        }
 
+        body {
+            font-family: 'Georgia', serif;
+            background: #2b2b2b url('https://cdn.pixabay.com/photo/2017/08/30/00/16/parchment-2692449_1280.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #ffc107;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #ffc107;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffc107;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .forum {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .forum th, .forum td {
+            border: 1px solid #ffc107;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .forum th {
+            background: #ffc107;
+            color: #000;
+        }
+
+        .forum tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+  <body>
+    <header>
+        <h1>Documents</h1>
+        <p>Portail des documents - Retrouvez tous les sorts et cartes pour votre quête</p>
+    </header>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="#forum">Forum</a>
+        <a href="#documents">Documents</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#campagne">Campagne</a>
+    </nav>
+  </body>
+</html>
