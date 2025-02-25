@@ -85,6 +85,24 @@
         .forum tr:nth-child(even) {
             background: rgba(255, 255, 255, 0.1);
         }
+
+        /* ✅ Style pour les blocs de classes de sorts */
+        .classe-sorts {
+            padding: 15px;
+            border: 1px solid #ffc107;
+            margin: 10px 0;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        /* ✅ Effet au survol pour animer les classes */
+        .classe-sorts:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+        }
+        
     </style>
 </head>
   <body>
@@ -101,22 +119,23 @@
     </nav>
       <div class="container" id="documents">
     <section id="sorts">
-        <h2>Livre de sorts</h2>
-        <p>Retrouvez la liste des sorts pour votre classe</p>
-           <h3>Liste de classe</h3>
-        <!-- Section pour chaque personnage -->
-        <div id="magicien">
-            <h4>Magicien</h4>
-            <p><a href="livre_sorts_magicien.pdf" target="_blank"> 📜 Télécharger la liste de sorts du magicien</a></p>
-        </div>
-        <div id="rodeur">
-            <h4>Rôdeur</h4>
-            <p><a href="livre_sorts_rodeur.pdf" target="_blank"> 📜 Télécharger la liste de sorts du rodeur</a></p>
-        </div>
-        <div id="sorcier">
-            <h4>Sorcier</h4>
-            <p><a href="livre_sorts_sorcier.pdf" target="_blank"> 📜 Télécharger la liste de sorts du sorcier</a></p>
-        </div>
+    <h2>Livre de sorts</h2>
+    <p>Retrouvez la liste des sorts pour votre classe</p>
+    <h3>Liste de classe</h3>
+
+    <!-- Section pour chaque personnage -->
+    <div class="classe-sorts" id="magicien">
+        <h4>Magicien</h4>
+        <p><a href="livre_sorts_magicien.pdf" target="_blank"> 📜 Télécharger la liste de sorts du magicien</a></p>
+    </div>
+    <div class="classe-sorts" id="rodeur">
+        <h4>Rôdeur</h4>
+        <p><a href="livre_sorts_rodeur.pdf" target="_blank"> 📜 Télécharger la liste de sorts du rôdeur</a></p>
+    </div>
+    <div class="classe-sorts" id="sorcier">
+        <h4>Sorcier</h4>
+        <p><a href="livre_sorts_sorcier.pdf" target="_blank"> 📜 Télécharger la liste de sorts du sorcier</a></p>
+    </div>
     </section>
     <section id="decks">
         <h2>Deck des sorts</h2>
