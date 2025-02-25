@@ -7,7 +7,7 @@
     <style>
         a:link,
         a:visited {
-            color: lime; /* Les liens restent bleus, qu'ils soient visités ou non */
+            color: lime;
         }
 
         body {
@@ -32,11 +32,17 @@
             text-shadow: 2px 2px 4px #000;
         }
 
+        /* ✅ Barre de navigation fixe */
         nav {
             display: flex;
             justify-content: center;
             background: rgba(0, 0, 0, 0.8);
             padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         nav a {
@@ -44,10 +50,17 @@
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.2em;
+            transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
         }
 
         nav a:hover {
+            color: white;
             text-decoration: underline;
+        }
+
+        /* ✅ Ajustement du padding pour éviter que la nav fixe ne cache le contenu */
+        body {
+            padding-top: 60px;
         }
 
         .container {
@@ -65,25 +78,38 @@
             text-shadow: 1px 1px 3px #000;
         }
 
-        .forum {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .forum th, .forum td {
+        /* ✅ Style des fiches de personnage */
+        .fiche-personnage {
+            padding: 15px;
             border: 1px solid #ffc107;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .forum th {
-            background: #ffc107;
-            color: #000;
-        }
-
-        .forum tr:nth-child(even) {
+            margin: 10px 0;
+            border-radius: 5px;
             background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .fiche-personnage:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+        }
+
+        .fiche-personnage h4 {
+            color: #ffc107;
+        }
+
+        .fiche-personnage p a {
+            color: #ffc107;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .fiche-personnage p a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -99,10 +125,12 @@
         <a href="#galerie">Galerie</a>
         <a href="#campagne">Campagne</a>
     </nav>
+    
     <div class="container" id="accueil">
         <h2>Bienvenue sur le portail de votre campagne JDR</h2>
         <p>Explorez l'univers, partagez vos idées, et coordonnez vos aventures !</p>
     </div>
+
     <div class="container" id="campagne">
         <h2>Détails de la Campagne</h2>
         <p><strong>Résumé :</strong> Les aventuriers doivent explorer une tour mystérieuse...</p>
@@ -122,52 +150,52 @@
         <div id="baffror">
             <h4>Baffror Forgeplume</h4>
             <p><strong>Résumé :</strong> Nain lettré cherchant à construire une bibliothèque contenant tout le savoir du monde.  Il est obnubilé par un mystérieux grimoire qu'il cherche à tout prix à déchiffrer.</p>
-            <p><a href="baffror_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
-            <p><a href="lettré_fiche_classe.pdf" target="_blank">Télécharger la classe de personnage (PDF)</a></p>
-            <p><a href="traits_et_particularités.pdf" target="_blank">Télécharger traits et particularités du personnage (PDF)</a></p>
+            <p><a href="baffror_fiche_personnage.pdf" target="_blank"> 📜 Télécharger la fiche de personnage (PDF)</a></p>
+            <p><a href="lettré_fiche_classe.pdf" target="_blank"> 📜 Télécharger la classe de personnage (PDF)</a></p>
+            <p><a href="traits_et_particularités.pdf" target="_blank"> 📜 Télécharger traits et particularités du personnage (PDF)</a></p>
         </div>
         <div id="eloria">
             <h4>Eloria Feuillétincelle</h4>
             <p><strong>Résumé :</strong> Rendre le monde meilleur en chassant le mal sous toutes ses formes.</p>
-            <p><a href="eloria_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+            <p><a href="eloria_fiche_personnage.pdf" target="_blank"> 📜 Télécharger la fiche de personnage (PDF)</a></p>
         </div>
         <div id="kodalys">
             <h4>Kodalys Kotsuyo</h4>
             <p><strong>Résumé :</strong> Créer un artefact puissant et pouvant moduler les lois du monde.</p>
-            <p><a href="kodalys_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+            <p><a href="kodalys_fiche_personnage.pdf" target="_blank"> 📜 Télécharger la fiche de personnage (PDF)</a></p>
         </div>
         <div id="zyrka">
             <h4>Zyrka Marmilèche</h4>
             <p><strong>Résumé :</strong> Accomplir une mission pour l'ordre supérieur de son monastère et ramener une relique pour le monastère.</p>
-            <p><a href="zyrka_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
+            <p><a href="zyrka_fiche_personnage.pdf" target="_blank"> 📜 Télécharger la fiche de personnage (PDF)</a></p>
         </div>
         <div id="zaar">
             <h4>Zaar Béni Asmodaï</h4>
             <p><strong>Résumé :</strong> Retrouver son village natal et ses congénères tieffelins.</p>
-            <p><a href="Zaar_Tieffeline_Fiche.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
-            <p><a href="sorcier_fiche_classe.pdf" target="_blank">Télécharger la classe de personnage (PDF)</a></p>
-            <p><a href="traits_et_particularités_Zaar.pdf" target="_blank">Télécharger traits et particularités du personnage (PDF)</a></p>
+            <p><a href="Zaar_Tieffeline_Fiche.pdf" target="_blank"> 📜 Télécharger la fiche de personnage (PDF)</a></p>
+            <p><a href="sorcier_fiche_classe.pdf" target="_blank"> 📜 Télécharger la classe de personnage (PDF)</a></p>
+            <p><a href="traits_et_particularités_Zaar.pdf" target="_blank"> 📜 Télécharger traits et particularités du personnage (PDF)</a></p>
         </div>
         <div id="thalric">
             <h4>Thalric Riven</h4>
             <p><strong>Résumé :</strong> Chasser une créature sauvage inconnue qui évolue dans les ombres et la brume, tuant les villageois et aventuriers perdus.</p>
-            <p><a href="thalric_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
-            <p><a href="rodeur_fiche_classe.pdf" target="_blank">Télécharger la classe de personnage (PDF)</a></p>
-            <p><a href="traits_et_particularités_thalric.pdf" target="_blank">Télécharger traits et particularités du personnage (PDF)</a></p>
+            <p><a href="thalric_fiche_personnage.pdf" target="_blank"> 📜 Télécharger la fiche de personnage (PDF)</a></p>
+            <p><a href="rodeur_fiche_classe.pdf" target="_blank"> 📜 Télécharger la classe de personnage (PDF)</a></p>
+            <p><a href="traits_et_particularités_thalric.pdf" target="_blank"> 📜 Télécharger traits et particularités du personnage (PDF)</a></p>
         </div>
         <div id="papipol">
             <h4>Papipol</h4>
             <p><strong>Résumé :</strong> Rechercher une hache vorpale de facture légendaire et de puissance divine (artefact).</p>
-            <p><a href="Papipol_Barbare.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
-            <p><a href="barbare_fiche_classe.pdf" target="_blank">Télécharger la classe de personnage (PDF)</a></p>
-            <p><a href="traits_et_particularités_papipol.pdf" target="_blank">Télécharger traits et particularités du personnage (PDF)</a></p>
+            <p><a href="Papipol_Barbare.pdf" target="_blank"> 📜 Télécharger la fiche de personnage (PDF)</a></p>
+            <p><a href="barbare_fiche_classe.pdf" target="_blank"> 📜 Télécharger la classe de personnage (PDF)</a></p>
+            <p><a href="traits_et_particularités_papipol.pdf" target="_blank"> 📜 Télécharger traits et particularités du personnage (PDF)</a></p>
         </div>
         <div id="jouro">
             <h4>Jouro Binnet</h4>
             <p><strong>Résumé :</strong> Libérer ses congénères dont le village est devenu un camp de prisonniers demi-orcs pour des vendeurs d'esclaves.</p>
-            <p><a href="Jouro_fiche_personnage.pdf" target="_blank">Télécharger la fiche de personnage (PDF)</a></p>
-            <p><a href="guerrier_fiche_classe.pdf" target="_blank">Télécharger la classe de personnage (PDF)</a></p>
-            <p><a href="traits_et_particularités_yann.pdf" target="_blank">Télécharger traits et particularités du personnage (PDF)</a></p>
+            <p><a href="Jouro_fiche_personnage.pdf" target="_blank"> 📜 Télécharger la fiche de personnage (PDF)</a></p>
+            <p><a href="guerrier_fiche_classe.pdf" target="_blank"> 📜 Télécharger la classe de personnage (PDF)</a></p>
+            <p><a href="traits_et_particularités_yann.pdf" target="_blank"> 📜 Télécharger traits et particularités du personnage (PDF)</a></p>
         </div>
     </div>
 </body>
